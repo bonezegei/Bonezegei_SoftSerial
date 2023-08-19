@@ -21,6 +21,8 @@ public:
   void write(char ch);
   void print(const char *ch);
   void println(const char *ch);
+  void print(String str);
+  void println(String str);
 
   char available();
   int read();
