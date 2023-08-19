@@ -55,6 +55,14 @@ void Bonezegei_SoftSerial::println(const char *ch) {
   write('\n');
 }
 
+void Bonezegei_SoftSerial::print(String str){
+  print(str.c_str());
+}
+
+void Bonezegei_SoftSerial::println(String str){
+  println(str.c_str());
+}
+
 char Bonezegei_SoftSerial::available() {
   int x = digitalRead(_rx);
   if (x) {
