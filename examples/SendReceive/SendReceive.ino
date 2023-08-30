@@ -31,4 +31,8 @@ void loop() {
     int ch = SoftSerial.read();
     Serial.write(ch);
   }
+  if (Serial.available()) {
+    int ch = Serial.read();
+    SoftSerial.write(ch);
+  }
 }
