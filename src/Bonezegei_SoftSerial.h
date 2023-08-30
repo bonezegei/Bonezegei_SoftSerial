@@ -15,6 +15,7 @@ public:
 
   Bonezegei_SoftSerial();
   Bonezegei_SoftSerial(int rx, int tx);
+  Bonezegei_SoftSerial(int rx);
 
   void begin(int baud);
 
