@@ -19,6 +19,11 @@ Bonezegei_SoftSerial::Bonezegei_SoftSerial(int rx, int tx) {
   digitalWrite(_tx, HIGH);
 }
 
+Bonezegei_SoftSerial::Bonezegei_SoftSerial(int rx){
+  _rx = rx;
+  pinMode(_rx, INPUT_PULLUP);
+}
+
 void Bonezegei_SoftSerial::begin(int baud) {
   _baud = baud;
   timeInterval = (1.0 / (float)baud);
