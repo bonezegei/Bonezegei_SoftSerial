@@ -12,11 +12,16 @@ Bonezegei_SoftSerial::Bonezegei_SoftSerial() {
 Bonezegei_SoftSerial::Bonezegei_SoftSerial(int rx, int tx) {
   _rx = rx;
   _tx = tx;
-
-  pinMode(_rx, INPUT_PULLUP);
-  //attachInterrupt(digitalPinToInterrupt(interruptPin), blink, FALLING);
+  //TX mode
+  if(rx<0){
   pinMode(_tx, OUTPUT);
   digitalWrite(_tx, HIGH);
+  }
+  else{
+  pinMode(_rx, INPUT_PULLUP);
+  pinMode(_tx, OUTPUT);
+  digitalWrite(_tx, HIGH);
+  }
 }
 
 Bonezegei_SoftSerial::Bonezegei_SoftSerial(int rx){
