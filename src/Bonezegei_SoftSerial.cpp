@@ -2,6 +2,7 @@
   This Library is written for Software Serial
   Author: Bonezegei (Jofel Batutay)
   Date: August 2023 
+  Last Updated: May 2024
 */
 #include "Bonezegei_SoftSerial.h"
 
@@ -61,6 +62,17 @@ void Bonezegei_SoftSerial::println(const char *ch) {
     write(*ch);
     ch++;
   }
+  write('\r');
+  write('\n');
+}
+
+void Bonezegei_SoftSerial::print(char ch){
+  write(ch);
+}
+
+void Bonezegei_SoftSerial::println(char ch){
+  write(ch);
+  write('\r');
   write('\n');
 }
 
