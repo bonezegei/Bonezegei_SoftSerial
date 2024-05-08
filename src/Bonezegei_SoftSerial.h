@@ -2,6 +2,7 @@
   This Library is written for Software Serial
   Author: Bonezegei (Jofel Batutay)
   Date: August 2023 
+  Last Updated: May 2024
 
   8 bit word 1 Stop bit
 */
@@ -22,6 +23,8 @@ public:
   void write(char ch);
   void print(const char *ch);
   void println(const char *ch);
+  void print(char ch);   
+  void println(char ch);
   void print(String str);
   void println(String str);
 
